@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,11 +23,21 @@ class MainActivity : ComponentActivity() {
         setContent {
             FoodRecipeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Text("Food Recipe App",modifier= Modifier
-                        .fillMaxWidth()
-                        .padding(innerPadding)
-                        .padding(10.dp) , Color.Blue , style = MaterialTheme.typography.headlineLarge)
-                    RecipeScreen()
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(innerPadding)
+                    ) {
+                        Text(
+                            text = "Food Recipe App",
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(10.dp),
+                            color = Color.Black,
+                            style = MaterialTheme.typography.headlineLarge
+                        )
+                        RecipeScreen()
+                    }
                 }
             }
         }
