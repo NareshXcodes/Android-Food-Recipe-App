@@ -1,22 +1,17 @@
 package com.naresh.foodrecipeapp
 
 import android.os.Bundle
-import android.text.style.BackgroundColorSpan
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.naresh.foodrecipeapp.ui.theme.FoodRecipeAppTheme
 
@@ -27,7 +22,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             FoodRecipeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Text("Food Recipe App",modifier=Modifier.fillMaxWidth().padding(innerPadding).padding(10.dp) , Color.Blue , style = MaterialTheme.typography.headlineLarge)
+                    Text("Food Recipe App",modifier= Modifier
+                        .fillMaxWidth()
+                        .padding(innerPadding)
+                        .padding(10.dp) , Color.Blue , style = MaterialTheme.typography.headlineLarge)
+                    RecipeScreen()
                 }
             }
         }
