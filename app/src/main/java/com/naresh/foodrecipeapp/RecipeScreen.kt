@@ -1,14 +1,11 @@
 package com.naresh.foodrecipeapp
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -64,8 +60,6 @@ fun CategoryItem (category: Category , navigateToDetails:(Category)->Unit) {
         modifier = Modifier
             .padding(8.dp)
             .fillMaxSize()
-            .background(color = Color.LightGray , shape = RoundedCornerShape(5.dp))
-            .border(1.dp , color = Color.LightGray , shape = RoundedCornerShape(5.dp))
             .clickable { navigateToDetails(category) },
         horizontalAlignment = Alignment.CenterHorizontally
     ){
@@ -74,14 +68,6 @@ fun CategoryItem (category: Category , navigateToDetails:(Category)->Unit) {
             .aspectRatio(1f))
 
         Row(modifier = Modifier.fillMaxWidth() , horizontalArrangement = Arrangement.Center){
-            Text(
-                text = category.idCategory ,
-                color = Color.DarkGray ,
-                modifier = Modifier.padding(top = 5.dp),
-                style = MaterialTheme.typography.titleMedium
-            )
-            Spacer(modifier = Modifier.padding(2.dp))
-
             Text(
                 text = category.strCategory ,
                 color = Color.Black ,

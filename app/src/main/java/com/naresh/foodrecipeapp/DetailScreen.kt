@@ -32,6 +32,7 @@ fun DetailScreen(category:Category){
     ){
         Text(text=category.strCategory , textAlign = TextAlign.Start , style = MaterialTheme.typography.headlineLarge , color = Color.Blue)
         Image(painter =  rememberAsyncImagePainter(category.strCategoryThumb),contentDescription =null ,modifier =Modifier.wrapContentSize().aspectRatio(1f).border(1.dp , color = Color.Transparent, shape = RoundedCornerShape(5.dp)) )
+        Text(text = "${category.strCategory}  Description : " , textAlign = TextAlign.Left  , style = MaterialTheme.typography.headlineSmall , color = Color.Black )
         Text(text=category.strCategoryDescription , textAlign = TextAlign.Justify , style = MaterialTheme.typography.bodyMedium , color = Color.DarkGray , modifier = Modifier.verticalScroll(rememberScrollState()))
     }
 }
