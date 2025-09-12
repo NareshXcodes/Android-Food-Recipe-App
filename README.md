@@ -6,6 +6,14 @@ A modern Android application built with Kotlin that helps users discover, browse
   <p><em>A modern Android application showcasing food categories with beautiful Material Design 3 UI</em></p>
 </div>
 
+<p align="left">
+  <a href="https://developer.android.com/jetpack/compose"><img alt="Jetpack Compose" src="https://img.shields.io/badge/Jetpack%20Compose-1.6%2B-4285F4?logo=jetpackcompose&logoColor=white"></a>
+  <a href="https://m3.material.io/"><img alt="Material 3" src="https://img.shields.io/badge/Material%20Design-3-18A999?logo=materialdesign&logoColor=white"></a>
+  <a href="https://kotlinlang.org/"><img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-1.9%2B-7F52FF?logo=kotlin&logoColor=white"></a>
+  <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"><img alt="JDK" src="https://img.shields.io/badge/JDK-17-007396?logo=java&logoColor=white"></a>
+</p>
+
+
 ## ✨ Features
 
 - 🎨 **Modern UI** - Built with Jetpack Compose and Material Design 3
@@ -64,7 +72,6 @@ A modern Android application built with Kotlin that helps users discover, browse
 2. **Search**: Use the search bar to find specific recipes or ingredients
 3. **View Details**: Tap on any recipe to view detailed instructions and ingredients
 4. **Save Favorites**: Tap the heart icon to save recipes to your favorites
-5. **Filter Options**: Use category filters to narrow down recipe types
 
 ## 🎨 Screenshots
 
