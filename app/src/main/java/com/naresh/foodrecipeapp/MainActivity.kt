@@ -14,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 import com.naresh.foodrecipeapp.ui.theme.FoodRecipeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,6 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val NavController = rememberNavController()
             FoodRecipeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(
@@ -36,11 +38,10 @@ class MainActivity : ComponentActivity() {
                             color = Color.Black,
                             style = MaterialTheme.typography.headlineLarge
                         )
-                        RecipeScreen()
+                        RecipeApp(navController = NavController )
                     }
                 }
             }
         }
     }
 }
-
